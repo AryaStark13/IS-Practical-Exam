@@ -7,7 +7,7 @@ for i in s:
     if i==" ":
         ans+="0"
     else:
-        ans+=chr((ord(i)+k)%255)
+        ans+=chr((ord(i)+k-97)%26 + 97)
 print("Encrypted text is :",ans)
 
 
@@ -20,5 +20,5 @@ for i in s:
     if i==" ":
         ans+="0"
     else:
-        ans+=chr((ord(i)-k+255)%255)
+        ans+=chr((ord(i)-k-97 + 26)%26 + 97)
 print("Plain text is :",ans)
